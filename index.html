@@ -1,66 +1,202 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Profil Stania Willdan Hanani</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Willzz Entertainment</title><style>
 
-<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
 
 body{
-font-family: Arial;
 background:#0f172a;
 color:white;
-text-align:center;
-padding:40px;
 }
 
-.profile{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-max-width:600px;
-margin:auto;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#020617;
 }
 
-h1{
+nav h2{
 color:#38bdf8;
 }
 
-h2{
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#020617,#0f172a);
+}
+
+.hero h1{
+font-size:50px;
+color:#38bdf8;
+}
+
+.hero p{
+margin-top:10px;
+font-size:20px;
+}
+
+.section{
+padding:60px 10%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:30px;
 color:#22c55e;
 }
 
-</style>
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+margin-bottom:20px;
+}
 
-</head>
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
 
-<body>
+.skill{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+text-align:center;
+}
 
-<div class="profile">
+.social{
+text-align:center;
+}
 
-<h1>Stania Willdan Hanani</h1>
+.social a{
+display:block;
+margin:10px;
+color:#38bdf8;
+text-decoration:none;
+}
 
-<h2>Profil</h2>
-<p>
-Lahir di Banyumas, Jawa Tengah.
-Saat ini bersekolah di SMKN 2 Purwokerto
-angkatan 2028 dengan jurusan Teknik Elektronika.
-</p>
+.ai-box{
+text-align:center;
+}
 
-<h2>Minat</h2>
-<p>
-Master of Ceremony<br>
-Editor Video<br>
-Content Creator
-</p>
+input{
+padding:10px;
+width:60%;
+border:none;
+border-radius:8px;
+}
 
-<h2>Pendidikan</h2>
-<p>
-SMKN 2 Purwokerto<br>
-Teknik Elektronika
-</p>
+button{
+padding:10px 20px;
+margin-top:10px;
+background:#38bdf8;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
 
+#response{
+margin-top:15px;
+color:#22c55e;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+margin-top:40px;
+}
+
+</style></head><body><nav>
+<h2>Willzz Entertainment</h2>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#ai">AI WILLZZ</a>
+<a href="#social">Social</a>
 </div>
+</nav><section class="hero">
+<h1>Stania Willdan Hanani</h1>
+<p>Content Creator • Editor • Master of Ceremony</p>
+</section><section class="section" id="about">
+<h2>About Me</h2><div class="card">
+<p>
+Saya adalah pelajar yang lahir di Banyumas, Jawa Tengah.
+Saat ini saya menempuh pendidikan di SMKN 2 Purwokerto
+angkatan 2028 dengan jurusan Teknik Elektronika.
+</p><p>
+Saya memiliki minat besar dalam dunia komunikasi,
+kreativitas digital, dan teknologi.
+Saya aktif mengembangkan kemampuan sebagai
+Master of Ceremony, video editor,
+serta content creator.
+</p><p>
+Melalui Willzz Entertainment,
+saya ingin membangun identitas digital
+dan membagikan karya kreatif kepada banyak orang.
+</p></div>
+</section><section class="section" id="skills">
+<h2>Skills & Interests</h2><div class="skills"><div class="skill">
+<h3>🎤 MC</h3>
+<p>Public speaking & event hosting</p>
+</div><div class="skill">
+<h3>🎬 Editing</h3>
+<p>Video editing & creative content</p>
+</div><div class="skill">
+<h3>📱 Content Creator</h3>
+<p>Social media creativity</p>
+</div></div></section><section class="section" id="ai">
+<h2>AI WILLZZ Assistant 🤖</h2><div class="ai-box"><p>Tanyakan soal pelajaran atau pengetahuan umum.</p><input id="question" placeholder="Tulis pertanyaan..."><br><button onclick="askAI()">Tanya AI</button>
 
-</body>
+<p id="response"></p></div></section><section class="section" id="social">
+<h2>Social Media</h2><div class="social"><a href="#">Instagram: @stwillzz_</a>
+
+<a href="#">Facebook: Mas Willy</a>
+
+<a href="#">YouTube: Stania Willdan Hanani Official</a>
+
+</div></section><footer><p>© 2026 Willzz Entertainment</p></footer><script>
+
+function askAI(){
+
+let q = document.getElementById("question").value.toLowerCase();
+
+let answer="AI WILLZZ belum mengetahui jawabannya.";
+
+if(q.includes("2+2")){
+answer="Jawaban dari 2 + 2 adalah 4";
+}
+
+else if(q.includes("hukum ohm")){
+answer="Hukum Ohm: V = I × R";
+}
+
+else if(q.includes("ibu kota indonesia")){
+answer="Ibu kota Indonesia adalah Jakarta.";
+}
+
+document.getElementById("response").innerText=answer;
+
+}
+
+</script></body>
 </html>
